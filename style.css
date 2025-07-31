@@ -354,8 +354,8 @@ button:hover {
   }
 }
 
-.gallery-grid img {
-  width: 100%;
+.image {
+  width: 100vw;
   height: auto;
   display: block;
   object-fit: cover;
