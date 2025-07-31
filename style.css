@@ -210,12 +210,14 @@ font-style: italic;
 }
 
 .info-content {
+   font-family: 'Cormorant Garamond', serif;
   font-size: 1rem;
   color: #333;
   line-height: 1.6;
 }
 
 .info-content p {
+  font-family: 'Cormorant Garamond', serif;
   margin: 0;
 }
 
