@@ -1,1 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+ :root {
+      --accent: #111;
+      --light: hsl(162, 76%, 97%);
+    }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: var(--accent);
+      background: var(--light);
+    }
+    header {
+      background: white;
+      text-align: center;
+      padding: 4rem 1rem 2rem;
+    }
+    header h1 {
+    font-family: "Cormorant Garamond", serif;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-weight: 300;
+      font-size: 1.1rem;
+      margin: 0;
+    }
+    section {
+      padding: 3rem 1rem;
+      max-width: 100%;
+      margin: auto;
+    }
+    h2 {
+       font-family: "Cormorant Garamond", serif;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    form {
+      display: grid;
+      gap: 1.5rem;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-family: inherit;
+    }
+    button {
+      background: black;
+      color: white;
+      padding: 0.75rem;
+      border: none;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #333;
+    }
+    .confirmation {
+      margin-top: 1rem;
+      color: green;
+      font-weight: 500;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+    }
 
+     .hero-container {
+    position: relative;
+    text-align: center;
+    height: 95vh; /* You can reduce this value to crop more */
+    overflow: hidden;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    display: block;
+    margin-top: 10%;
+    opacity: 0.4; 
+  }
+
+  .hero-text {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .hero-text h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 5rem;
+    margin: 0;
+    color: rgb(25, 82, 77);
+  }
+
+  .hero-text p {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 0rem;
+    color: black;
+  }
+
+  @media (max-width: 600px) {
+    .hero-text h1 {
+      font-size: 2rem;
+    }
+    .hero-text p {
+      font-size: 1rem;
+    }
+  }
+
+  .invitation {
+  max-width: 800px;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.small-title {
+    font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem;
+  letter-spacing: 0.05em;
+  font-weight: 800;
+  font-style: italic;
+  margin-bottom: 2rem;
+  color: rgb(25, 82, 77);
+}
+
+.invitation-main {
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 2rem;
+  color: rgb(25, 82, 77);
+  line-height: 1.6;
+  margin: 0 auto 2rem;
+}
+
+.invitation-sub {
+    font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.8;
+}
+.details {
+    max-width: 800px;
+  background-color: rgb(25, 82, 77);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem 1rem;
+  gap: 2rem;
+}
+
+.detail-column {
+  flex: 1 1 700px;
+  max-width: 800px;
+  text-align: center;
+}
+
+.label {
+  font-family: 'Cormorant Garamond', serif;
+    font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+}
+
+.detail-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  color: rgb(255, 255, 255);
+}
+
+.detail-sub {
+font-family: 'Cormorant Garamond', serif;
+font-style: italic;
+  font-size: 1.2rem;
+  color: #ffffff;
+  line-height: 0.5;
+}
+
+.info-section {
+  background-color: hsl(162, 76%, 97%);
+  margin-top: 3rem;
+}
+
+.info-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  max-width: 1000px;
+  margin: 0 auto 3rem;
+  
+  gap: 2rem;
+}
+
+.info-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  color: rgb(25, 82, 77);
+}
+
+.info-content {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.info-content p {
+  margin: 0;
+}
+
+/* Responsive: stack columns on small screens */
+@media (max-width: 700px) {
+  .info-row {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .info-title {
+    margin-bottom: 1rem;
+  }
+}
+
+.rsvp-section {
+  background-color: rgb(25, 82, 77); /* light pink-beige background */
+  padding: 4rem 1rem;
+}
+
+.rsvp-form-container {
+  background: white;
+  border-radius: 16px;
+  padding: 1rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Cormorant Garamond', serif;
+  color: #555; /* soft gray text on white */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.rsvp-form-container h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  color: #555;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.25rem;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  margin-top: 0.5rem;
+  padding: 0.6rem 0.8rem;
+  font-size: 1.1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: 'Cormorant Garamond', serif;
+  color: #444;
+  background-color: #fff;
+}
+
+textarea {
+  resize: vertical;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  font-size: 1.25rem;
+}
+
+legend {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+fieldset label {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 1.1rem;
+}
+
+input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+button {
+  padding: 0.8rem 1.2rem;
+  font-size: 1.2rem;
+  background-color: rgb(25, 82, 77);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Cormorant Garamond', serif;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  align-self: start;
+}
+
+button:hover {
+  background-color: rgb(190, 220, 211);
+}
+
+#rsvp-confirmation {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: green;
+}
+
+.photo-gallery {
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0; /* remove spacing between images */
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}

@@ -3,5 +3,136 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <html>
+
+    <div class="hero-text">
+    <h1> Deborah & Joey </h1>
+    <p> 06. 06. 2026 ~ Los Angeles, California </p>
+  </div>
+    <div class="hero-container">
+  <img class="hero-image" src="skyline.png" alt="Los Angeles Skyline">
+  
+</div>
+
+<section class="invitation">
+  <p class="small-title">You're Invited!</p>
+  <p class="invitation-main">
+    We would love for you to join us as we get married this summer!
+  </p>
+</section>
+<br> <br>
+
+<section class="details">
+  <div class="detail-column">
+    <p class="label">Ceremony & Cocktail Hour</p>
+    <p class="detail-heading">UCLA Mathias Botanical Gardens</p>
+    <p class="detail-sub"> June 6, 2026 ~ 5:30 pm </p>
+  </div>
+
+  <div class="detail-column">
+    <p class="label">Dinner & Dancing</p>
+    <p class="detail-heading">La Kretz Garden Pavilion</p>
+    <p class="detail-sub"> June 6, 2026 ~ 7:00 pm  </p>
+  </div>
+</section>
+
+<br> <br>
+
+<section class="info-section">
+  <div class="info-row">
+    <div class="info-title">Getting There & Parking</div>
+    <div class="info-content">
+      <p>
+        The ceremony and cocktail hour will take place inside the Mathias Botanical Gardens. The reception will be held right outside at the La Kretz Garden Pavilion.<br><br>
+        You will need to enter through the northern entrance of the gardens. Navigate to the corner of Tiverton Drive & Charles E Young - then follow the path down.<br><br>
+        Parking is available at Parking Structure 27 or Parking Structure 2 (pay-by-plate). Street parking is available along Hilgard Ave.<br><br>
+        We'll have signs from the parking structures to guide you to the entrance!
+      </p>
+    </div>
+  </div>
+
+  <div class="info-row">
+    <div class="info-title">Dress Code</div>
+    <div class="info-content">
+      <p>
+        Dressy casual - summer dresses, linen shirts, light fabrics.  
+        No need for formalwear or jackets unless you want to!  
+        We'll be outdoors for the ceremony and reception.
+      </p>
+    </div>
+  </div>
+
+  <div class="info-row">
+    <div class="info-title">Dietary Restrictions</div>
+    <div class="info-content">
+      <p>
+        We will have veggie, vegan, and gluten-free options available!  
+        Please make sure to indicate in your RSVP if you have any dietary restrictions so we can make sure to provide an option for everyone!
+      </p>
+    </div>
+  </div>
+
+  <div class="info-row">
+    <div class="info-title">Registry</div>
+    <div class="info-content">
+      <p>
+        All of you are traveling to celebrate with us, so just being there means the world to us and is all we ask for.  
+        If you'd still like to get us a gift, we would love to have a wonderful experience in your honor as we travel on our honeymoon next year! You can find our honeymoon fund <a href="https://www.honeyfund.com/site/orret-ganley-06-06-2026"> here.</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<section class="rsvp-section">
+  <div class="rsvp-form-container">
+    <h2>RSVP</h2>
+    <form id="rsvp-form">
+      <label>
+        Name(s)
+        <input type="text" name="name" required>
+      </label>
+
+      <label>
+        Email Address
+        <input type="email" name="email" required>
+      </label>
+
+      <label>
+        RSVP
+        <select name="attending" required>
+          <option value="">Select an option</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </label>
+
+      <fieldset>
+        <legend>Dietary Restrictions</legend>
+        <label><input type="checkbox" name="diet" value="vegan"> Vegan</label>
+        <label><input type="checkbox" name="diet" value="vegetarian"> Vegetarian</label>
+        <label><input type="checkbox" name="diet" value="gluten-free"> Gluten-Free</label>
+      </fieldset>
+
+      <label>
+        Additional Comments or Questions
+        <textarea name="comments" rows="4"></textarea>
+      </label>
+
+      <button type="submit">Submit RSVP</button>
+      <p id="rsvp-confirmation" style="margin-top: 1rem; color: green;"></p>
+    </form>
+  </div>
+</section>
+
+<section class="photo-gallery">
+  <div class="gallery-grid">
+    <img src="picture_5.jpg" alt="Engagement Photo 1">
+    <img src="picture_1.jpg" alt="Engagement Photo 2">
+    <img src="picture_2.JPG" alt="Engagement Photo 3">
+    <img src="picture_3.jpg" alt="Engagement Photo 4">
+    <img src="picture_4.jpg" alt="Engagement Photo 5">
+  </div>
+</section>
+
     <script src = "script.js"> </script>
 </html>
