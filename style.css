@@ -276,13 +276,15 @@ input[type="email"],
 select,
 textarea {
   margin-top: 0.5rem;
-  padding: 0.6rem 0.8rem;
+  padding: 0.8rem 0.8rem;
   font-size: 1.1rem;
   border: 1px solid #ccc;
   border-radius: 8px;
   font-family: 'Cormorant Garamond', serif;
   color: #444;
   background-color: #fff;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 textarea {
