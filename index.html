@@ -87,6 +87,7 @@ nav::-webkit-scrollbar{display:none}
   background:#0A5F85;
   color:white;
 }
+
 @media(min-width:600px){
   body{max-width:720px}
   .hero{height:480px}
@@ -121,6 +122,13 @@ nav::-webkit-scrollbar{display:none}
   .result-sub{font-size:0.8rem}
   .pill{font-size:0.85rem;padding:0.4rem 0.9rem}
 }
+
+#seating{
+  display:none !important;
+}
+#seating-nav{
+  display:none !important;
+}
 </style>
 </head>
 <body>
@@ -137,7 +145,7 @@ nav::-webkit-scrollbar{display:none}
 <nav>
   <button class="nav-btn active" onclick="showSection('schedule')">Schedule</button>
   <button class="nav-btn" onclick="showSection('map')">Venue Map</button>
-  <button class="nav-btn" onclick="showSection('seating')">Find My Seat</button>
+  <button class="nav-btn" id = "seating-nav" onclick="showSection('seating')">Find My Seat</button>
   <button class="nav-btn" onclick="showSection('details')">Details</button>
 </nav>
 
