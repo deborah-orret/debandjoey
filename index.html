@@ -267,8 +267,8 @@ document.getElementById('mapWrap').addEventListener('click',e=>{
 
 // *** GUEST LIST ***
 const guestList = [
-  {name:"Rolando Hernandez",table:1},{name:"Lilliam Diaz",table:1},{name:"Lourdes Orret",table:1},{name:"Sidney Orret",table:1},{name:"Diego Orret",table:1},{name:"Marina Mokinner",table:1},{name:"Edward Rumbos",table:1},{name:"Anthony Rumbos",table:1},{name:"Adolfo Rumbos",table:1},{name:"Arabella Rumbos",table:1},{name:"Ingrid Zubaran",table:1},
-  {name:"Alex Eftimie",table:2},{name:"Brooke Shimasa",table:2},{name:"Casey Asaoka",table:2},{name:"Josh Patel",table:2},{name:"Rachel Millena",table:2},{name:"Alli Newcomb",table:2},{name:"Mark Newcomb",table:2},{name:"Jim Stein",table:2},{name:"Natalie Austin",table:2},{name:"Grace Mcmullen",table:2},{name:"Taylor Tae",table:2},
+  {name:"Rolando Hernandez",table:1},{name:"Lili Diaz",table:1},{name:"Lourdes Orret",table:1},{name:"Sidney Orret",table:1},{name:"Diego Orret",table:1},{name:"Marina Mckinnen",table:1},{name:"Edward Rumbos",table:1},{name:"Anthony Rumbos",table:1},{name:"Adolfo Rumbos",table:1},{name:"Arabella Rumbos",table:1},{name:"Ingrid Zubaran",table:1},
+  {name:"Alex Eftimie",table:2},{name:"Brooke Shimasasaki",table:2},{name:"Casey Asaoka",table:2},{name:"Josh Patel",table:2},{name:"Rachel Millena",table:2},{name:"Alli Brown",table:2},{name:"Mark Newcomb",table:2},{name:"Jim Stein",table:2},{name:"Natalie Austin",table:2},{name:"Grace Mcmullen",table:2},{name:"Taylor Tae",table:2},
   {name:"Amanda Chacon",table:3},{name:"Darya Pavlova",table:3},{name:"Jonathan Shi",table:3},{name:"Matthew Davis",table:3},{name:"Nisha Bansal",table:3},{name:"Alexia Rubin",table:3},{name:"Lauren Case",table:3},{name:"Victoria Burglia",table:3},{name:"Amado Morel",table:3},{name:"Pablo Morel",table:3},{name:"Jules Hanel",table:3},
   {name:"Jessica Ganley",table:4},{name:"Austin Stark",table:4},{name:"Sadhika Yamasani",table:4},{name:"Arun Jayanthi",table:4},{name:"Nicole Goldenhersch",table:4},{name:"Jeff Goldenhersch",table:4},{name:"Cal Axe",table:4},{name:"Dani Lowder",table:4},{name:"Crystal Jeong",table:4},{name:"Alex Nieznyiecki",table:4},
   {name:"Jan Clark",table:5},{name:"Gary Clark",table:5},{name:"Maddy Sabbe",table:5},{name:"Emma Henderson",table:5},{name:"Rodney Sabbe",table:5},{name:"Marcie Sabbe",table:5},{name:"Natalie Sabbe",table:5},{name:"Steve Savve",table:5},{name:"Brian Ganley",table:5},{name:"Kelli Ganley",table:5},
@@ -276,7 +276,7 @@ const guestList = [
   {name:"Hector Perez",table:7},{name:"Rosy Perez",table:7},{name:"Nivia Montenegro",table:7},{name:"Enrico Santi",table:7},{name:"Mark Hodde",table:7},{name:"Idiko Hodde",table:7},{name:"Melanie Barbee",table:7},{name:"Greg Barbee",table:7},{name:"Amelia Barbee",table:7},{name:"Isabel Barbee",table:7},
   {name:"Sydney Lawler",table:8},{name:"Tai Lawler",table:8},{name:"Maxine Scott",table:8},{name:"Serene Licea",table:8},{name:"Carlos Torres",table:8},{name:"Leo Perez",table:8},{name:"Alejandro Perez",table:8},{name:"Jesse Burgos",table:8},{name:"Julia Cisneros",table:8},{name:"Zach Villanueva",table:8},{name:"Madzy Salamatin",table:8},
   {name:"Andre Calderon",table:9},{name:"Noah Galindo",table:9},{name:"Avery Marshall",table:9},{name:"Harper Easley",table:9},{name:"Nikki Nittianandan",table:9},{name:"Jade Farisse",table:9},{name:"Elliot Adamcyzak",table:9},{name:"Bobby Atilano",table:9},{name:"Luis Medina",table:9},{name:"Carlos Juarez",table:9},{name:"Zachary Huang",table:9},
-  {name:"Nathan Lam",table:10},{name:"August Drake",table:10},{name:"Violet Chandler",table:10},{name:"Charlie Weinberger",table:10},{name:"William Wallius",table:10},{name:"Christine Manou",table:10},{name:"Gabrielle Trujillo",table:10},{name:"Shane Vandevelde",table:10},{name:"Madeleine Lees",table:10},{name:"Celeste Acosta",table:10},{name:"Ivan Syeed-Miller",table:10}
+  {name:"Nathan Lam",table:10},{name:"August Drake",table:10},{name:"Violet Chandler",table:10},{name:"Charlie Weinberger",table:10},{name:"William Wallius",table:10},{name:"Christine Manoukian",table:10},{name:"Gabrielle Trujillo",table:10},{name:"Shane Vandevelde",table:10},{name:"Madeleine Lees",table:10},{name:"Celeste Acosta",table:10},{name:"Ivan Syeed-Miller",table:10}
 ];
 
 let highlightedIndex = -1;
@@ -311,7 +311,7 @@ function onSeatKeydown(e) {
     items.forEach((el,i) => el.classList.toggle('highlighted', i===highlightedIndex));
   } else if (e.key === 'Enter') {
     if (highlightedIndex >= 0 && items[highlightedIndex]) {
-      items[highlightedIndex].dispatchEvent(new MouseEvent('mousedown'));
+      selectGuest(items[highlightedIndex].innerText);
     } else {
       findSeat();
     }
@@ -322,7 +322,11 @@ function onSeatKeydown(e) {
 
 function selectGuest(name) {
   document.getElementById('guestInput').value = name;
-  document.getElementById('autocompleteList').classList.remove('show');
+
+  const list = document.getElementById('autocompleteList');
+  list.classList.remove('show');
+  list.innerHTML = '';
+
   findSeat();
 }
 
