@@ -329,7 +329,7 @@ function findSeat() {
   const m = guestList.find(g => g.name.toLowerCase() === v) || guestList.find(g => g.name.toLowerCase().includes(v));
   if (m) {
     r.className = 'seat-result found';
-    r.innerHTML = '<div class="result-name">'+m.name+'</div><div class="result-table">Table '+m.table+'</div><div class="result-sub">We\'re so glad you\'re here \u2736</div>';
+    r.innerHTML = '<div class="result-name">'+m.name+'</div><div class="result-table">Table '+m.table+'</div><div class="result-sub"></div>';
   } else {
     r.className = 'seat-result not-found';
     r.innerHTML = '<div style="font-size:0.83rem;color:#8a7d6e">Couldn\'t find <strong>'+document.getElementById('guestInput').value+'</strong> \u2014 try your full name!</div>';
